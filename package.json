@@ -3,15 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "gh-pages": "^2.0.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "moment": "^2.24.0",
+    "prettier": "^1.17.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "reactstrap": "^5.0.0"
+  },
+  "lint-staged": {
+    "{src,__mocks__,tests}/**/*.{js,json}": [
+      "prettier --single-quote --arrow-parens=always --write",
+      "./node_modules/.bin/eslint",
+      "git add"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint '{src,__mocks__,tests}/**/*.{js,json}'",
+    "pretty": "prettier --single-quote --arrow-parens=always --list-different '{src,__mocks__,tests}/**/*.{js,json,ts,tsx}'",
+    "format": "prettier --single-quote --arrow-parens=always --write '{src,__mocks__,tests}/**/*.{js,json,ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +47,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
