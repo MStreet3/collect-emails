@@ -1,5 +1,6 @@
 import React from 'react';
 import BootstrapForm from './BootstrapFormComponent';
+import { Link } from 'react-router-dom';
 
 export default function Main() {
   return (
@@ -15,6 +16,12 @@ export default function Main() {
 
       <div className="container">
         <BootstrapForm />
+      </div>
+
+      <div className="form-group text-center">
+        <Link to="/unsubscribe" className="btn btn-danger">
+          Unsubscribe
+        </Link>
       </div>
     </div>
   );

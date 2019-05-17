@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import rp from 'request-promise';
 
 class UnsubForm extends Component {
@@ -31,7 +32,7 @@ class UnsubForm extends Component {
         xnQsjsdp:
           '471f3021ed654f3e4892f442fdd9c42e02dc17ac2d8e5198b73b2b5f87cee4fa',
         actionType: 'dW5zdWJzY3JpYmU=',
-        returnURL: 'https://mstreet3.github.io/collect-emails',
+        returnURL: 'https://mstreet3.github.io/collect-emails/',
         email: this.state.email
       }
     };
@@ -67,6 +68,12 @@ class UnsubForm extends Component {
               Unsubscribe
             </button>
           </div>
+        </div>
+
+        <div className="form-group text-center">
+          <Link to="/" className="btn btn-success">
+            Sign up
+          </Link>
         </div>
       </form>
     );
