@@ -15,8 +15,10 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "reactstrap": "^5.0.0"
+    "reactstrap": "^5.0.0",
+    "request-promise": "^4.2.4"
   },
+  "homepage": "https://mstreet3.github.io/collect-emails",
   "lint-staged": {
     "{src,__mocks__,tests}/**/*.{js,json}": [
       "prettier --single-quote --arrow-parens=always --write",
@@ -25,6 +27,8 @@
     ]
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
