@@ -5,9 +5,9 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter basename="/collect-emails">
+    <HashRouter basename="/">
       <Switch>
-        <Route exact path="/collect-emails" component={Main} />
+        <Route exact path="/" component={Main} />
         <Route exact path="/collect-emails/unsubscribe" component={UnsubPage} />
       </Switch>
     </HashRouter>
