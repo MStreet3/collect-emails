@@ -22,11 +22,10 @@ class UnsubForm extends Component {
     const options = {
       method: 'POST',
       uri: 'https://crm.zoho.com/crm/Unsubscribe',
-      qs: {
-        encoding: 'UTF-8'
-      },
+      encoding: 'UTF-8',
       headers: {
-        'Content-Type': 'x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Upgrade-Insecure-Requests': 1
       },
       form: {
         xnQsjsdp:
@@ -36,6 +35,9 @@ class UnsubForm extends Component {
         email: this.state.email
       }
     };
+    this.setState({
+      email: ''
+    });
 
     return rp(options)
       .then((response) => {
@@ -71,7 +73,7 @@ class UnsubForm extends Component {
         </div>
 
         <div className="form-group text-center">
-          <Link to="/" className="btn btn-success">
+          <Link to="/" className="btn btn-dark">
             Sign up
           </Link>
         </div>

@@ -25,6 +25,7 @@ class BootstrapForm extends Component {
       headers: {
         'Content-Type': 'x-www-form-urlencoded'
       },
+      mode: 'no-cors',
       form: {
         xnQsjsdp:
           '6894d049cf0933024c1dbe585181e58e70b9a23da40771969ba1745ae7c8f1fd',
@@ -38,6 +39,9 @@ class BootstrapForm extends Component {
         Email: this.state.email
       }
     };
+    this.setState({
+      email: ''
+    });
 
     return rp(options)
       .then((response) => {
