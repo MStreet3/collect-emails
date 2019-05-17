@@ -8,6 +8,13 @@ class BootstrapForm extends Component {
       email: ''
     };
     this.submitEmail = this.submitEmail.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({
+      email: e.target.value
+    });
   }
 
   submitEmail() {
@@ -31,7 +38,7 @@ class BootstrapForm extends Component {
         Email: this.state.email
       }
     };
-    console.log(`the options are: ${JSON.stringify(options)}`);
+
     return rp(options)
       .then((response) => {
         console.log('Response went through!');
@@ -52,9 +59,14 @@ class BootstrapForm extends Component {
             className="form-control"
             id="subscriberEmail"
             placeholder="Enter your email for updates on the launch."
+            onChange={this.onChange}
           />
           <div className="input-group-append">
-            <button className="btn btn-dark" type="button">
+            <button
+              className="btn btn-dark"
+              type="button"
+              onClick={this.submitEmail}
+            >
               Submit
             </button>
           </div>
