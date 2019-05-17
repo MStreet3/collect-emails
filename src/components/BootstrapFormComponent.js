@@ -31,9 +31,6 @@ class BootstrapForm extends Component {
         Email: this.state.email
       }
     };
-    this.setState({
-      email: ''
-    });
     console.log(`the options are: ${JSON.stringify(options)}`);
     return rp(options)
       .then((response) => {
