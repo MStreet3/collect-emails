@@ -1,17 +1,16 @@
 import React from 'react';
 import Main from './components/MainComponent';
 import UnsubPage from './components/UnsubFormComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <HashRouter basename="/collect-emails">
       <Switch>
         <Route exact path="/collect-emails" component={Main} />
-        <Route exact path="/unsubscribe" component={UnsubPage} />
-        <Redirect to="/collect-emails" />
+        <Route exact path="/collect-emails/unsubscribe" component={UnsubPage} />
       </Switch>
-    </div>
+    </HashRouter>
   );
 }
 
