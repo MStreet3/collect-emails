@@ -1,0 +1,29 @@
+<form action='https://crm.zoho.com/crm/Unsubscribe?encoding=UTF-8' method='POST' name='unsubForm'
+    onSubmit='return emailValidate()'> <input type='hidden' name='xnQsjsdp'
+        value='471f3021ed654f3e4892f442fdd9c42e02dc17ac2d8e5198b73b2b5f87cee4fa' /> <input type='hidden'
+        name='actionType' value='dW5zdWJzY3JpYmU=' /> <input type='hidden' name='returnURL'
+        value='https://mstreet3.github.io/collect-emails' />
+    <table width='481' style='border:10px solid #f4f4f4;' cellpadding='0' cellspacing='0'>
+        <tr>
+            <td style='padding:10px 0px 10px 10px; font-family:sans-serif; font-size:13px;'><strong>Enter Your Email
+                    Address</strong> </td>
+            <td style='padding:10px 0px 10px 10px;'><input type='text' name='email' maxlength='120'
+                    style='width:190px;border:1px solid #c4d6e2; background-color:#fbfdff; font-family:sans-serif; font-size:13px;' />
+            </td>
+            <td style='padding:10px 10px 10px 0px;'><input type='submit'
+                    style='background-color:#7a7e8a; color:#ffffff; font-weight:bold; font-family:sans-serif; font-size:11px; border:1px solid #616572;'
+                    value='Unsubscribe' /></td>
+        </tr>
+    </table>
+    <script>
+        function emailValidate() {
+            var email = document.forms['unsubForm']['email'].value;
+            var atpos = email.indexOf('@');
+            var dotpos = email.lastIndexOf('.');
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+        }
+    </script>
+</form>
