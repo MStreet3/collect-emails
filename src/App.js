@@ -8,7 +8,7 @@ function App() {
     <HashRouter basename="/">
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route exact path="/collect-emails/unsubscribe" component={UnsubPage} />
+        <Route path="/unsubscribe" component={UnsubPage} />
       </Switch>
     </HashRouter>
   );
