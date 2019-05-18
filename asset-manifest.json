@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/collect-emails/static/css/main.34de6062.chunk.css",
-    "main.js": "/collect-emails/static/js/main.ac3631ce.chunk.js",
-    "main.js.map": "/collect-emails/static/js/main.ac3631ce.chunk.js.map",
+    "main.js": "/collect-emails/static/js/main.f52b730e.chunk.js",
+    "main.js.map": "/collect-emails/static/js/main.f52b730e.chunk.js.map",
     "runtime~main.js": "/collect-emails/static/js/runtime~main.22f2bdd8.js",
     "runtime~main.js.map": "/collect-emails/static/js/runtime~main.22f2bdd8.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/collect-emails/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.5c73a9dd.chunk.js": "/collect-emails/static/js/2.5c73a9dd.chunk.js",
-    "static/js/2.5c73a9dd.chunk.js.map": "/collect-emails/static/js/2.5c73a9dd.chunk.js.map",
+    "static/js/2.abe82877.chunk.js": "/collect-emails/static/js/2.abe82877.chunk.js",
+    "static/js/2.abe82877.chunk.js.map": "/collect-emails/static/js/2.abe82877.chunk.js.map",
     "index.html": "/collect-emails/index.html",
-    "precache-manifest.ef957f701210ba3e26a75155ab1dcaac.js": "/collect-emails/precache-manifest.ef957f701210ba3e26a75155ab1dcaac.js",
+    "precache-manifest.25576dc3feae5fbefaf163cc67607eab.js": "/collect-emails/precache-manifest.25576dc3feae5fbefaf163cc67607eab.js",
     "service-worker.js": "/collect-emails/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/collect-emails/static/css/2.22a7d4ef.chunk.css.map",
     "static/css/main.34de6062.chunk.css.map": "/collect-emails/static/css/main.34de6062.chunk.css.map"
