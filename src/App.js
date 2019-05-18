@@ -1,17 +1,8 @@
 import React from 'react';
 import Main from './components/MainComponent';
-import UnsubPage from './components/UnsubFormComponent';
-import { HashRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
-  return (
-    <HashRouter basename="/">
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/unsubscribe" component={UnsubPage} />
-      </Switch>
-    </HashRouter>
-  );
+  return <Main />;
 }
 
 export default App;

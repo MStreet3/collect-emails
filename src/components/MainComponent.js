@@ -19,9 +19,12 @@ export default function Main() {
       </div>
 
       <div className="form-group text-center">
-        <Link to="/unsubscribe" className="btn btn-danger">
+        <a
+          href="https://mstreet3.github.io/unsubscribe.html"
+          className="btn btn-danger"
+        >
           Unsubscribe
-        </Link>
+        </a>
       </div>
     </div>
   );

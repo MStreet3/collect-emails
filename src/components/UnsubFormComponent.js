@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import rp from 'request-promise';
+// import rp from 'request-promise';
 
 class UnsubForm extends Component {
   constructor(props) {
@@ -35,16 +35,19 @@ class UnsubForm extends Component {
             className="d-none"
             name="xnQsjsdp"
             value="471f3021ed654f3e4892f442fdd9c42e02dc17ac2d8e5198b73b2b5f87cee4fa"
+            readOnly
           />
           <input
             className="d-none"
             name="actionType"
             value="dW5zdWJzY3JpYmU="
+            readOnly
           />
           <input
             className="d-none"
             name="returnURL"
             value="https://mstreet3.github.io/collect-emails"
+            readOnly
           />
         </div>
         <div className="input-group mb-3">
@@ -52,7 +55,8 @@ class UnsubForm extends Component {
             Email
           </label>
           <input
-            type="email"
+            type="text"
+            name="email"
             className="form-control"
             id="unsubEmail"
             placeholder="Enter your email to unsubscribe from future updates..."
