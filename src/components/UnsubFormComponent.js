@@ -62,11 +62,7 @@ class UnsubForm extends Component {
             onChange={this.onChange}
           />
           <div className="input-group-append">
-            <button
-              className="btn btn-danger"
-              type="button"
-              onClick={this.submitEmail}
-            >
+            <button className="btn btn-danger" type="button">
               Unsubscribe
             </button>
           </div>

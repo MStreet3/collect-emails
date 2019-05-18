@@ -25,7 +25,6 @@ class BootstrapForm extends Component {
       headers: {
         'Content-Type': 'x-www-form-urlencoded'
       },
-      mode: 'no-cors',
       form: {
         xnQsjsdp:
           '6894d049cf0933024c1dbe585181e58e70b9a23da40771969ba1745ae7c8f1fd',
@@ -39,16 +38,14 @@ class BootstrapForm extends Component {
         Email: this.state.email
       }
     };
-    this.setState({
-      email: ''
-    });
 
     return rp(options)
       .then((response) => {
         console.log('Response went through!');
         console.log(`Response is: ${JSON.stringify(response)}`);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => this.setState({ email: '' }));
   }
 
   render() {
@@ -64,13 +61,10 @@ class BootstrapForm extends Component {
             id="subscriberEmail"
             placeholder="Enter your email for updates on the launch."
             onChange={this.onChange}
+            value={this.state.email}
           />
           <div className="input-group-append">
-            <button
-              className="btn btn-dark"
-              type="button"
-              onClick={this.submitEmail}
-            >
+            <button className="btn btn-dark" type="submit">
               Submit
             </button>
           </div>
