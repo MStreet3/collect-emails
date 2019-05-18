@@ -35,16 +35,18 @@ class UnsubForm extends Component {
         email: this.state.email
       }
     };
-    this.setState({
-      email: ''
-    });
 
     return rp(options)
       .then((response) => {
         console.log('Response went through!');
         console.log(`Response is: ${JSON.stringify(response)}`);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() =>
+        this.setState({
+          email: ''
+        })
+      );
   }
 
   render() {
@@ -60,9 +62,10 @@ class UnsubForm extends Component {
             id="unsubEmail"
             placeholder="Enter your email to unsubscribe from future updates..."
             onChange={this.onChange}
+            value={this.state.email}
           />
           <div className="input-group-append">
-            <button className="btn btn-danger" type="button">
+            <button className="btn btn-danger" type="submit">
               Unsubscribe
             </button>
           </div>
@@ -81,7 +84,7 @@ class UnsubForm extends Component {
 function UnsubPage() {
   return (
     <div>
-      <div className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid alert-danger">
         <div className="container">
           <h1 className="display-4">Unsubscribe</h1>
           <p className="lead">
