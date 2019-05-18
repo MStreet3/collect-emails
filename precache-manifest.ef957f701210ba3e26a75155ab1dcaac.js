@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e76c81fcf0ddae216dd6844d723e6e2",
+    "revision": "2466020f35892770ffac39a95e407551",
     "url": "/collect-emails/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/collect-emails/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "155863dd9400108c25e1",
+    "revision": "4cc167a032df3ec26aa1",
     "url": "/collect-emails/static/css/main.34de6062.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/collect-emails/static/js/2.5c73a9dd.chunk.js"
   },
   {
-    "revision": "155863dd9400108c25e1",
-    "url": "/collect-emails/static/js/main.51cec6ba.chunk.js"
+    "revision": "4cc167a032df3ec26aa1",
+    "url": "/collect-emails/static/js/main.ac3631ce.chunk.js"
   },
   {
     "revision": "3233a26ab76721b80855",
